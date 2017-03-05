@@ -4,12 +4,12 @@ This example is Signin using Cordova Plugin Googleplus.
 ## Working Code
 To run the above tested and ready code please clone the repository and use the following commands in your project root folder.
 
-...
+```
 npm install 
 ionic platform add android (or ios)
 ionic build android (or ios)
 ionic run android (or ios)
-...
+```
 
 ## Step by Step Working Example
 
@@ -38,9 +38,9 @@ file, it's better to use the Debug certificate fingerprint, after that, you have
 create a credential for OAuth2 client with your Release certificate fingerprint. This is necessary to your application work on both
 Development and Production releases.
 Ensure that you are using the correct alias name while generating the fingerprint.
-...
+```
 $ keytool -exportcert -keystore <path-to-debug-or-production-keystore> -list -v -alias <alias-name>
-...
+```
 Login on Android will use the accounts signed in on the user's device.
 
 ### Web Client Id
@@ -56,7 +56,7 @@ cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CLIENT_I
 ##Usage
 
 ### Home Component
-...
+```
 import { GooglePlus } from 'ionic-native';
 
 googleLogin(){
@@ -70,12 +70,12 @@ googleLogin(){
             console.log(error);
           });
   }
-...
+```
 
 ### Home html
-...
+```
 <button (click)="googleLogin()" </button>
-...
+```
 
 ### Resources
 
